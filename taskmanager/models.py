@@ -19,8 +19,8 @@ class Recipe(db.Model):
     category_id = db.Column(db.Integer, db.ForeignKey("category.id", ondelete="CASCADE"), nullable=False)
 
     def __repr__(self):
-        return "#{0} - Recipe{1}".format(
-            self.id, self.recipe_name
+        return "#{0} - Recipe: {1}".format(
+            self.id, self.recipe_name, self.preparing_time
         )
 
 
