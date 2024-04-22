@@ -15,7 +15,7 @@ class Recipe(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     recipe_name = db.Column(db.String(50), unique=True, nullable=False)
     recipe_description = db.Column(db.Text, nullable=False)
-    preparing_time = db.Column(db.Time, nullable=False)
+    preparing_time = db.Column(db.String(25), nullable=False)
     category_id = db.Column(db.Integer, db.ForeignKey("category.id", ondelete="CASCADE"), nullable=False)
 
     def __repr__(self):

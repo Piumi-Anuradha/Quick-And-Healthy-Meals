@@ -26,7 +26,7 @@
       <!--preparing_time-->
       <div class="row">
         <div class="input-field col s12">
-            <i class="fas fa-time-alt prefix teal-darken3-text text-darken4"></i>
+            <i class="fas fa-regular fa-clock prefix teal-darken3-text text-darken4"></i>
           <input id="preparing_time" name="preparing_time" type="text" 
             class="timepicker validate" required>
           <label for="recipe_name">Preparing Time</label>
@@ -40,8 +40,8 @@
             <select name="category_id" id="category_id" class="validate" required>
               <option value="" disabled selected>Choose Category</option>
               {% for category in categories %}
-                  <option value="{{ category_id }}">{{ category.category_name}}</option>
-              { % endfor % }
+                  <option value="{{ category_id }}">{{category.category_name}}</option>
+              {% endfor %}
             </select>
             <label for="category_id">Categories</label>
         </div>
